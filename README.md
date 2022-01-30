@@ -34,10 +34,8 @@ Upload to a game platform
 
 ## Visualizations 
 <img width="263" alt="Screen Shot 2022-01-30 at 7 51 41 AM" src="https://user-images.githubusercontent.com/80733759/151706839-9d7ecc17-40f2-4646-bd10-63450ed9bd6f.png">
+
 **Fig 1: 4 types of circuits used**
-
-![2022-01-30](https://user-images.githubusercontent.com/80733759/151707039-64f933de-eadb-4518-ba03-6e0a3a288446.png)
-
 
 ## Our experience at iQuHack
 We all thought that iQuHack was really fun, and the people here were really nice. It was a great opportunity to meet other people who were interested in similar fields, and we thought it was a really interesting experience.
