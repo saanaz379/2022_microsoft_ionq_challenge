@@ -7,7 +7,7 @@ Aengus McGuinness, Krishnaveni Parvataneni, Saarah Nazar, Swetha Kandeepan
 The purpose of this project is to create a telephone-esque game using Quantum Key Distribution, allowing for this concept to become more intellectually accessible to the public. Our code generates a series of random bits and bases on which to create qubits which encode the message. Our reciever then measures the message with his own random bases. They then share their bases and throw out the bits without matching bases. They now have their own secure keys! Our program can also model the impact on the keys with any number of interceptors as well.
 
 ## Creativity
-Our original vision for this project was to emulate a simplified version of the quantum key distribution where players can fill the positions of sender, reciever, and "eavesdropper" to securely transmit messages. 
+Our original vision for this project was to emulate a simplified version of Quantum Key Distribution where players can fill the positions of sender, reciever, and "eavesdropper". The sender would attempt to securely and correctly transmit a message to the reciever, while the "eavesdropper" would try to intermittently intercept the message
 
 ### Memes of Inspiration
 ![image (4)](https://user-images.githubusercontent.com/79679653/151679554-6cd1b1e4-ad90-43ba-95b1-31b002aaf459.png)
