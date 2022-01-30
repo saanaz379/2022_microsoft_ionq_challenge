@@ -40,9 +40,5 @@ Upload to a game platform
 ## Our experience at iQuHack
 We all thought that iQuHack was really fun, and the people here were really nice. It was a great opportunity to meet other people who were interested in similar fields, and we thought it was a really interesting experience.
 
-## Presentation
-https://docs.google.com/viewer?url=https://github.com/kparvataneni12/2022_microsoft_ionq_challenge/files/7966332/iQuHACK2022.pdf
-
-
 ## Date
 January 29-30, 2021
