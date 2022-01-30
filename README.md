@@ -4,7 +4,7 @@
 Aengus McGuinness, Krishnaveni Parvataneni, Saarah Nazar, Swetha Kandeepan
 
 ## Purpose
-The purpose of this project is to create a telephone-esque game using Quantum Key Distribution, allowing for this concept to become more intellectually accessible to the public. Our code generates a series of random bits and bases on which to create qubits which encode the message. Our reciever then measures the message with his own random bases. They then share their bases and throw out the bits without matching bases. They now have their own secure keys! Our program can also model the impact on the keys with any number of interceptors as well. 
+The purpose of this project is to create a telephone-esque game using Quantum Key Distribution, allowing for this concept to become more intellectually accessible to the public. Our code generates a series of random bits and bases on which to create qubits which encode the message. Our reciever then measures the message with his own random bases. They then share their bases and throw out the bits without matching bases. They now have their own secure keys! Our program can also model the impact on the keys with any number of interceptors as well.
 
 ## Creativity
 Our original vision for this project was to emulate a simplified version of the quantum key distribution where players can fill the positions of sender, reciever, and "eavesdropper" to securely transmit messages. 
