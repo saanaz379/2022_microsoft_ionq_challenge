@@ -37,6 +37,8 @@ Upload to a game platform
 
 **Fig 1: 4 types of circuits used**
 
+![2022-01-30-1](https://user-images.githubusercontent.com/80733759/151708026-35633f2a-2194-4a45-89ba-316eb509d699.png)
+
 ## Our experience at iQuHACK
 We thought that iQuHACK was really fun, and the people here were nice and helpful. It was a great opportunity to meet other people who were interested in similar fields, develop our coding skills, and further our understanding of quantum computing. Overall, it was a really enriching experience!
 
