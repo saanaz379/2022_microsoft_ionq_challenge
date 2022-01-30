@@ -1,19 +1,19 @@
 # Project: QKDelephone
 
-## Team Name - The Qeys to Success
+## Team Name: The Qeys to Success
 Aengus McGuinness, Krishnaveni Parvataneni, Saarah Nazar, Swetha Kandeepan
 
 ## Purpose
-The purpose of this project is to create a telephone-esque game using Quantum Key Distribution, allowing for this concept to become more intellectually accessible to the public. Our code generates a series of random bits and bases on which to create qubits which encode the message. Our reciever then measures the message with his own random bases. They then share their bases and throw out the bits without matching bases. They now have their own secure keys! Our program can also model the impact on the keys with any number of interceptors as well. 
+The purpose of this project is to create a telephone-esque game using Quantum Key Distribution, allowing for this concept to become more intellectually accessible to the public. Our code generates a series of random bits and bases on which to create qubits that encode a message. Our reciever then measures the message with their own random bases. They then share their bases and throw out the bits without matching bases. The final result is their own secure key! Additionally, our program can model the impact that any number of interceptors will have on the key.
 
 ## Creativity
-Our original vision for this project was to emulate a modular version of Quantum Key Distribution where players can fill the positions of sender, reciever, and "eavesdropper," of which we created a module. The current module allows for the sender to attempt to securely and correctly transmit a message to the reciever, while the "eavesdropper" would try to intermittently intercept the message.
+Our original vision for this project was to emulate a modular version of Quantum Key Distribution where players can fill the positions of sender, reciever, and "eavesdropper". The current module allows for the sender to attempt to securely and correctly transmit a message to the reciever, while the "eavesdropper" tries to intermittently intercept the message.
 
 ## Impact
-Our code idea has 3 kinds of impacts - education, entertainment, and information security. One of the main goals of our project was to make knowledge of QKD more widespread and allow for more people to access and be able to use a QKD algorithm, which gives our code an educational impact. As for the entertainment impact, our game is very similar to a game of telephone, which is a really fun childhood game. In the game of telephone, there are multiple players who try to pass a message down the line. Over time, the message becomes more and more deformed, which adds to the game's funniness. This game is also a model for more secure information exchange, and such models, as an effect of the educational impact can have a great impact on Cryptography.
+Our code idea has 3 kinds of impacts — education, entertainment, and information security. One of the main goals of our project was to make knowledge of QKD more widespread, allowing for more people to access it and be able to use a QKD algorithm. As for the entertainment impact, our game has similarities to the fun childhood game "telephone". In the game of telephone, there are multiple players who try to pass a message down the line. As the message is transmitted, it becomes increasingly garbled, just like how a key communicated through QKD might change with the presence of an interceptor. This game is also a model for more secure information exchange, giving it the ability to make the pubic more knowledgable about quantum cryptography, which is employed by governments, militaries, and banks.
 
 ## Tutorial
-During the course of this hackathon, we weren't able to create graphics for our game so currently it is a command line game. Just run our file with any python interpreter such as python3 and it will print to the command line.
+Over the course of this hackathon, we weren't able to create graphics for our game, so currently it is a command line game. Run our file with any python interpreter such as python3 and it will print to the command line.
 
 ## Future Improvements
 Make the game interactive
@@ -37,8 +37,8 @@ Upload to a game platform
 
 **Fig 1: 4 types of circuits used**
 
-## Our experience at iQuHack
-We all thought that iQuHack was really fun, and the people here were really nice. It was a great opportunity to meet other people who were interested in similar fields, and we thought it was a really interesting experience.
+## Our experience at iQuHACK
+We thought that iQuHACK was really fun, and the people here were nice and helpful. It was a great opportunity to meet other people who were interested in similar fields, develop our coding skills, and further our understanding of quantum computing. Overall, it was a really enriching experience!
 
 ## Date
 January 29-30, 2021
