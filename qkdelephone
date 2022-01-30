@@ -1,0 +1,118 @@
+from qiskit import QuantumCircuit, Aer, transpile, assemble
+from qiskit.visualization import plot_histogram, plot_bloch_multivector
+from numpy.random import randint
+import numpy as np
+from random import randint
+
+np.random.seed(seed=1)
+information = "Hello World"
+n = 100
+
+def main():
+    infoBytes = [((bin(i))[2:]) for i in bytearray("information", "utf8")]
+    infoBits = []
+    for byte in infoBytes:
+        for bit in byte:
+            infoBits.append(int(bit))
+    infoBits = np.array(infoBits)
+    #these are the bits to be encoded
+    bits = [randint(0, 1) for i in range(n)]
+    #these are the sender's bases
+    senderBases = [randint(0, 1) for i in range(n)]
+    #The message they are trying to send
+    message = encode_bits(bits, senderBases)
+
+    #INTERCEPTION!!!!
+    #interceptor = kInterceptors(9, message)
+    
+    #The recipients random bases
+    recipientBases = [randint(0, 1) for i in range(n)]
+    #The measurement of the message with those bases
+    recipientResult = measure_message(message, recipientBases)
+    #Get the keys
+    
+    senderKey = good_bits(senderBases, recipientBases, bits)
+    recipientKey = good_bits(senderBases, recipientBases, recipientResult)
+    sample_size = 15
+    #print(len(recipientKey))
+    bit_selection = [randint(0, n) for i in range(sample_size)]
+    recipientSample = sample_bits(recipientKey, bit_selection)
+    print("Receiver key sample = " + str(recipientSample))
+    senderSample = sample_bits(senderKey, bit_selection)
+    print("Sender key sample = " + str(senderSample))
+    infoBitsEncoded = infoBits * int(sum(senderKey))
+    infoBitsDecoded = infoBitsEncoded / sum(recipientKey)
+    if sum(infoBits == infoBitsDecoded) == len(infoBits):
+        print(f"The message is {information}.")
+    else:
+        print("Your message has been intercepted!")
+    
+#This encodes the message
+def encode_bits(bits, bases):
+    message = []
+    for i in range(n):
+        qc = QuantumCircuit(1,1)
+        if bases[i] == 0: # Prepare qubit in Z-basis
+            if bits[i] == 0:
+                pass 
+            else:
+                qc.x(0)
+        else: # Prepare qubit in X-basis
+            if bits[i] == 0:
+                qc.h(0)
+            else:
+                qc.x(0)
+                qc.h(0)
+        qc.barrier()
+        message.append(qc)
+    return message
+
+def measure_message(message, bases):
+    backend = Aer.get_backend('aer_simulator')
+    measurements = []
+    for q in range(n):
+        if bases[q] == 0: # measuring in Z-basis
+            message[q].measure(0,0)
+        if bases[q] == 1: # measuring in X-basis
+            message[q].h(0)
+            message[q].measure(0,0)
+        aer_sim = Aer.get_backend('aer_simulator')
+        qobj = assemble(message[q], shots=1, memory=True)
+        result = aer_sim.run(qobj).result()
+        measured_bit = int(result.get_memory()[0])
+        measurements.append(measured_bit)
+    return measurements
+
+def good_bits(x_bases, y_bases, bits):
+    good_bits = []
+    for q in range(n):
+        if x_bases[q] == y_bases[q]:
+            # If both used the same basis, add
+            # this to the list of 'good' bits
+            good_bits.append(bits[q])
+    return good_bits
+
+def sample_bits(bits, selection):
+    sample = []
+    for i in selection:
+        # use np.mod to make sure the
+        # bit we sample is always in 
+        # the list range
+        i = np.mod(i, len(bits))
+        # pop(i) removes the element of the
+        # list at index 'i'
+        sample.append(bits.pop(i))
+    return sample
+
+def kInterceptors(k, message):
+    interceptors = []
+    for i in range(k):
+        person = []
+        bases = [randint(0, 1) for i in range(n)]
+        person.append(bases)
+        person.append(measure_message(message, bases))
+        interceptors.append(person)
+    return kInterceptors
+
+if __name__ == "__main__":
+    main()
