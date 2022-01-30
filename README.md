@@ -9,8 +9,32 @@ The purpose of this project is to create a telephone-esque game using Quantum Ke
 ## Creativity
 Our original vision for this project was to emulate a modular version of Quantum Key Distribution where players can fill the positions of sender, reciever, and "eavesdropper," of which we created a module. The current module allows for the sender to attempt to securely and correctly transmit a message to the reciever, while the "eavesdropper" would try to intermittently intercept the message.
 
+## Impact
+Our code idea has 3 kinds of impacts - education, entertainment, and information security. One of the main goals of our project was to make knowledge of QKD more widespread and allow for more people to access and be able to use a QKD algorithm, which gives our code an educational impact. As for the entertainment impact, our game is very similar to a game of telephone, which is a really fun childhood game. In the game of telephone, there are multiple players who try to pass a message down the line. Over time, the message becomes more and more deformed, which adds to the game's funniness. This game is also a model for more secure information exchange, and such models, as an effect of the educational impact can have a great impact on Cryptography.
+
 ## Tutorial
 During the course of this hackathon, we weren't able to create graphics for our game so currently it is a command line game. Just run our file with any python interpreter such as python3 and it will print to the command line.
+
+## Future Improvements
+Make the game interactive
+> Using argparse to allow the user to choose number of interceptors and message
+
+Graphical User Interface
+> Create a graphical interface through PyGame or cmu-graphics
+
+More interactive players
+> Change the interceptors to actual people who can interactively eavesdrop 
+
+Optimize the number of bits
+> Find the most efficient number of bits and qubits for the QKD
+
+Upload to a game platform
+> Upload a version of the game to an app store or another game hoster
+
+
+## Visualizations 
+<img width="263" alt="Screen Shot 2022-01-30 at 7 51 41 AM" src="https://user-images.githubusercontent.com/80733759/151706839-9d7ecc17-40f2-4646-bd10-63450ed9bd6f.png">
+4 types of circuits used
 
 ## Our experience at iQuHack
 We all thought that iQuHack was really fun, and the people here were really nice. It was a great opportunity to meet other people who were interested in similar fields, and we thought it was a really interesting experience.
